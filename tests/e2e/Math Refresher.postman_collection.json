@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "473abd5e-01aa-4db5-a61f-804987eaa087",
+		"name": "Math Refresher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/test",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e7f7dcd6-42f9-4996-8413-b2d5799f64c4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d89cbcda-0aed-4922-8a0a-e4ff55c634d0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "cdd14e56-0e09-49c9-8cec-afcd40466486",
+			"key": "domain",
+			"value": "https://5e4lt7qi51.execute-api.us-east-1.amazonaws.com/dev",
+			"type": "string"
+		}
+	]
+}
