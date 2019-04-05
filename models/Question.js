@@ -1,44 +1,40 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const model = mongoose.model('User', {
-    name: {
-        type: String,
+const model = mongoose.model('Question', {
+    firstNumber: {
+        type: Number,
         required: true,
         validate: {
-            validator(name) {
-                return validator.isAlphanumeric(name);
+            validator(firstNumber) {
+                return validator.isNumeric(firstNumber);
             },
         },
     },
-    firstname: {
-        type: String,
+    secondNumber: {
+        type: Number,
         required: true,
         validate: {
-            validator(firstname) {
-                return validator.isAlphanumeric(firstname);
+            validator(secondNumber) {
+                return validator.isNumeric(secondNumber);
             },
         },
     },
-    birth: {
-        type: Date,
-        required: true,
-    },
-    city: {
+    operation: {
         type: String,
         required: true,
         validate: {
-            validator(city) {
-                return validator.isAlphanumeric(city);
+            validator(operation) {
+                return validator.isAlphanumeric(operation);
             },
         },
     },
-    ip: {
-        type: String,
+    answer: {
+        type: Number,
         required: true,
         validate: {
-            validator(ip) {
-                return validator.isIP(ip);
+            validator(answer) {
+                return validator.isNumeric(answer);
             },
         },
     },
